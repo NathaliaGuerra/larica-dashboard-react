@@ -8,7 +8,7 @@ export default class Menu extends Component {
                 <aside className="main-sidebar sidebar-dark-primary elevation-4">
                     {/* Brand Logo */}
                     <a href="index3.html" className="brand-link">
-                        <img src="dist/img/AdminLTELogo.png" alt="Larica Logo" className="brand-image img-circle elevation-3" style={{ opacity: '.8' }} />
+                        <img src="dist/img/LaricaLogo.png" alt="Larica Logo" className="brand-image img-circle elevation-3" style={{ opacity: '.8' }} />
                         <span className="brand-text font-weight-light">Larica</span>
                     </a>
                     {/* Sidebar */}
@@ -29,6 +29,13 @@ export default class Menu extends Component {
                                         <p>Dashboard</p>
                                     </a>
                                 </li>
+
+                                {/* <li className="nav-item">
+                                    <a href="" className="nav-link">
+                                    <i className="nav-icon fas fa-users" />
+                                        <p>Usuarios</p>
+                                    </a>
+                                </li> */}
                                 
                             </ul>
                         </nav>

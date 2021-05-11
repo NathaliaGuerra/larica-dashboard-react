@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ProductItem extends Component {
+export default class UserItem extends Component {
 
     constructor(props){
         super(props)
@@ -8,41 +8,36 @@ export default class ProductItem extends Component {
     }
 
     render() {
-        const dataTarget = `#modal-flavor${this.props.flavor.id}`;
+        const fullName = this.props.user.firstName + ' ' + this.props.user.lastName;
+        const avatarSrc = `http://localhost:3003/${this.props.user.avatar}`;
+        const avatar = <img src={avatarSrc} alt={fullName} className="img-circle elevation-2" width="60" height="60" />
+        const dataTarget = `#modal-user${this.props.user.id}`;
         const buttonModal = <a type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target={dataTarget}><i className="fa fa-eye"></i> </a>;
-        const targetModal = `modal-flavor${this.props.flavor.id}`;
-        
-        let status;
-        if(this.props.flavor.status){
-            status = <span class="badge badge-info">Activo</span>
-        } else {
-            status = <span class="badge badge-danger">No Activo</span>
-        }
+        const targetModal = `modal-user${this.props.user.id}`;
 
         return (
-            <tr>
-                <td> {this.props.flavor.id} </td>
-                <td> {this.props.flavor.name} </td>
-                <td> {status} </td>
-                <td> {this.props.flavor.categoryName} </td>
-                <td> 
-                    {buttonModal}
-                </td>
+            
+                <tr>
+                    <td> {avatar} </td>
+                    <td> {fullName}  <br /> <small>{this.props.user.email}</small> </td>
+                    <td> 
+                        {buttonModal}
+                    </td>
 
-                {/* /.modal */}
-                <div className="modal fade" id={targetModal}>
+                    {/* /.modal */}
+                    <div className="modal fade" id={targetModal}>
                     <div className="modal-dialog">
                         <div className="modal-content">
-                            
+
                             <div className="modal-header">
-                                <h4 className="modal-title">{this.props.flavor.name}</h4>
+                                <h4 className="modal-title">{fullName}</h4>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
 
                             <div className="modal-body">
-                                <p>{this.props.flavor.description}</p>
+                                <p>{this.props.user.email}</p>
                             </div>
 
                             <div className="modal-footer justify-content-between">
@@ -52,11 +47,13 @@ export default class ProductItem extends Component {
                         </div>
                         {/* /.modal-content */}
                     </div>
-                {/* /.modal-dialog */}
-                </div>
-                {/* /.modal */}
+                    {/* /.modal-dialog */}
+                    </div>
+                    {/* /.modal */}
 
-            </tr>
+                </tr>
+                
+             
         )
     }
 }

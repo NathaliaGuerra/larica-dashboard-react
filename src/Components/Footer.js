@@ -6,10 +6,9 @@ export default class Footer extends Component {
             <div>
                 {/* Main Footer */}
                 <footer className="main-footer">
-                    <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-                    All rights reserved.
+                    <strong>Copyright © 2021 <a href="http://localhost:3003">Larica Heladería</a>.</strong>
                     <div className="float-right d-none d-sm-inline-block">
-                        <b>Version</b> 3.1.0
+                        <b>Version</b> 1.0
                     </div>
                 </footer>
             </div>

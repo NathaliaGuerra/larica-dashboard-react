@@ -3,33 +3,21 @@ import React, { Component } from 'react'
 export default class Header extends Component {
     render() {
         return (
-            <div>
-                {/* Navbar */}
-                <nav className="main-header navbar navbar-expand navbar-dark">
-                    {/* Left navbar links */}
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
-                        </li>
-                        <li className="nav-item d-none d-sm-inline-block">
-                            <a href="index3.html" className="nav-link">Inicio</a>
-                        </li>
-                        <li className="nav-item d-none d-sm-inline-block">
-                            <a href="#" className="nav-link">Contacto</a>
-                        </li>
-                    </ul>
-                    {/* Right navbar links */}
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" data-widget="fullscreen" href="#" role="button">
-                                <i className="fas fa-expand-arrows-alt" />
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                {/* /.navbar */}
+            <div className="content-header">
+                <div className="container-fluid">
+                    <div className="row mb-2">
+                        <div className="col-sm-6">
+                            <h1 className="m-0">Larica Dashboard</h1>
+                        </div>{/* /.col */}
+                        <div className="col-sm-6">
+                            <ol className="breadcrumb float-sm-right">
+                                <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                <li className="breadcrumb-item active">Larica Dashboard</li>
+                            </ol>
+                        </div>{/* /.col */}
+                    </div>{/* /.row */}
+                </div>{/* /.container-fluid */}
             </div>
-
         )
     }
 }

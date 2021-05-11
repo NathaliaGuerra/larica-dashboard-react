@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import ProductItem from './ProductItem'
+import UserItem from './UserItem'
 
-export default class ProductList extends Component {
+export default class UsersList extends Component {
 
     constructor(props){
         super(props);
-
+console.log(this.props.users)
     }
 
     render() {
@@ -13,7 +13,7 @@ export default class ProductList extends Component {
             <div>
                  <div className="card">
                     <div className="card-header border-transparent">
-                        <h3 className="card-title">Listado de Sabores</h3>
+                        <h3 className="card-title">Listado de Usuarios</h3>
                         <div className="card-tools">
                             <button type="button" className="btn btn-tool" data-card-widget="collapse">
                                 <i className="fas fa-minus" />
@@ -29,18 +29,16 @@ export default class ProductList extends Component {
                             <table className="table m-0">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Status</th>
-                                        <th>Category</th>
+                                        <th></th>
+                                        <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     
-                                    {this.props.flavors.map((flavor) => {
-                                        return <ProductItem flavor={flavor} />
-                                    })}
+                                {this.props.users.map((user) => {
+                                    return <UserItem user={user} />
+                                })}
 
                                 </tbody>
                             </table>
