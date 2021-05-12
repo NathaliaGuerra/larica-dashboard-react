@@ -7,6 +7,7 @@ import ProductList from './ProductList';
 import SimpleCardRow from './SimpleCardRow';
 import UsersList from './UsersList';
 
+const {REACT_APP_BACKEND_URL} = process.env;
 
 export default class Dashboard extends Component {
 
@@ -34,12 +35,12 @@ export default class Dashboard extends Component {
     }
 
     componentDidMount() {
-        this.apiCall("http://localhost:3003/api/flavorCategories", this.flavorCategories);
-        this.apiCall("http://localhost:3003/api/flavors", this.flavors);
-        this.apiCall("http://localhost:3003/api/users", this.users);
-        this.apiCall("http://localhost:3003/api/products", this.products);
-        this.apiCall("http://localhost:3003/api/users/latestUser", this.latestUser);
-        this.apiCall("http://localhost:3003/api/flavors/latestFlavor", this.latestFlavor);
+        this.apiCall(`${REACT_APP_BACKEND_URL}/api/flavorCategories`, this.flavorCategories);
+        this.apiCall(`${REACT_APP_BACKEND_URL}/api/flavors`, this.flavors);
+        this.apiCall(`${REACT_APP_BACKEND_URL}/api/users`, this.users);
+        this.apiCall(`${REACT_APP_BACKEND_URL}/api/products`, this.products);
+        this.apiCall(`${REACT_APP_BACKEND_URL}/api/users/latestUser`, this.latestUser);
+        this.apiCall(`${REACT_APP_BACKEND_URL}/api/flavors/latestFlavor`, this.latestFlavor);
 
     }
 

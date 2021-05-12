@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+const {REACT_APP_BACKEND_URL} = process.env;
+
 export default class CategoryItem extends Component {
 
     constructor(props){
@@ -7,7 +9,7 @@ export default class CategoryItem extends Component {
     }
 
     render() {
-        const photoUrl = `http://localhost:3003/${this.props.category.photo}`;
+        const photoUrl = `${REACT_APP_BACKEND_URL}/${this.props.category.photo}`;
         const photo = <img src={photoUrl} alt={this.props.category.name} className="img-size-50" />
 
         return (

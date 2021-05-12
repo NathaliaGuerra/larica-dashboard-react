@@ -11,12 +11,6 @@ export default class Navbar extends Component {
                         <li className="nav-item">
                             <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
                         </li>
-                        {/* <li className="nav-item d-none d-sm-inline-block">
-                            <a href="index3.html" className="nav-link">Inicio</a>
-                        </li>
-                        <li className="nav-item d-none d-sm-inline-block">
-                            <a href="#" className="nav-link">Contacto</a>
-                        </li> */}
                     </ul>
                     {/* Right navbar links */}
                     <ul className="navbar-nav ml-auto">

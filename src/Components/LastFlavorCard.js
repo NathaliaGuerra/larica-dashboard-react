@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import moment from 'moment';
 
+const {REACT_APP_BACKEND_URL} = process.env;
+
 export default class LastFlavorCard extends Component {
 
     constructor(props){
@@ -9,7 +11,7 @@ export default class LastFlavorCard extends Component {
 
     render() {
         const createdAt = moment(this.props.latestFlavor.createdAt).format('d-M-YYYY, h:mm:ss a');
-        const photoUrl = `http://localhost:3003/${this.props.latestFlavor.photo}`;
+        const photoUrl = `${REACT_APP_BACKEND_URL}/${this.props.latestFlavor.photo}`;
         const photo = <img src={photoUrl} alt={this.props.latestFlavor.name} className="img-circle elevation-2" width="170" height="170" />
 
         return (

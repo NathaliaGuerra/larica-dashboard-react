@@ -5,9 +5,7 @@ export default class UsersList extends Component {
 
     constructor(props){
         super(props);
-console.log(this.props.users)
     }
-
     render() {
         return (
             <div>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
+const {REACT_APP_BACKEND_URL} = process.env;
+
 export default class LastUserCard extends Component {
 
     constructor(props){
@@ -10,7 +12,7 @@ export default class LastUserCard extends Component {
     render() {
         const fullName = this.props.latestUser.firstName + ' ' + this.props.latestUser.lastName;
         const createdAt = moment(this.props.latestUser.createdAt).format('d-M-YYYY, h:mm:ss a');
-        const avatarSrc = `http://localhost:3003/${this.props.latestUser.avatar}`;
+        const avatarSrc = `${REACT_APP_BACKEND_URL}/${this.props.latestUser.avatar}`;
         const avatar = <img src={avatarSrc} alt={fullName} className="img-circle elevation-2" />
 
 
