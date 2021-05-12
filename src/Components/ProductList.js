@@ -38,8 +38,8 @@ export default class ProductList extends Component {
                                 </thead>
                                 <tbody>
                                     
-                                    {this.props.flavors.map((flavor) => {
-                                        return <ProductItem flavor={flavor} />
+                                    {this.props.flavors.map((flavor, i) => {
+                                        return <ProductItem key={i} flavor={flavor} />
                                     })}
 
                                 </tbody>

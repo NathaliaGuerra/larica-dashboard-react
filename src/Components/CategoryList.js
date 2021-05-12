@@ -29,8 +29,8 @@ export default class CategoryList extends Component {
                 <div className="card-body p-0">
                     <ul className="products-list product-list-in-card pl-2 pr-2">
 
-                        {this.props.flavorCategories.map((category) => {
-                            return <CategoryItem category={category} />
+                        {this.props.flavorCategories.map((category, i) => {
+                            return <CategoryItem key={i} category={category} />
                         })}
                         
                     </ul>

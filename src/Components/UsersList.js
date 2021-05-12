@@ -34,8 +34,8 @@ export default class UsersList extends Component {
                                 </thead>
                                 <tbody>
                                     
-                                {this.props.users.map((user) => {
-                                    return <UserItem user={user} />
+                                {this.props.users.map((user, i) => {
+                                    return <UserItem key={i} user={user} />
                                 })}
 
                                 </tbody>
